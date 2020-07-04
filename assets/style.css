@@ -1,0 +1,13 @@
+*{
+	font-family:"Segoe UI", "verdana";
+}
+
+code{
+	color: #2778ec;
+}
+
+.make-me-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
