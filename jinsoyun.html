@@ -9,12 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- bootstrap stuff end here -->
 
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <!-- end of highlight.js -->
-
     <title>ln2r - Jinsoyun</title>
   </head>
 
@@ -99,6 +93,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/who.png" class="img-fluid" alt="Command respond example">
 
                 <p id="daily" class="pb-2 border-bottom"><strong>Daily</strong> - <code class="text-primary">!daily [day]</code></p>              
                 <p>Current daily challange data.<br />Contains: rewards, quests name, quests location.</p>
@@ -115,6 +110,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/daily.png" class="img-fluid" alt="Command respond example">
 
                 <p id="dungeon" class="pb-2 border-bottom"><strong>Dungeon</strong> - <code class="text-primary">!dungeon [dungeon name]</code></p>              
                 <p>Get dungeon info and it's guide if available.<br />Contains: entry requirements, challenges day/type, ap recommendation, guides, rewards.</p>
@@ -131,6 +127,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/dungeon.png" class="img-fluid" alt="Command respond example">
 
                 <p id="drop" class="pb-2 border-bottom"><strong>Item Drop</strong> - <code class="text-primary">!drop [item name]</code></p>              
                 <p>Get which dungeon drop queried item.<br />Contains: dungeon name.</p>
@@ -147,6 +144,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/drop.png" class="img-fluid" alt="Command respond example">
 
                 <p id="event" class="pb-2 border-bottom"><strong>Event</strong> - <code class="text-primary">!event [day]</code></p>              
                 <p>Current on-going event summary.<br />Contains: duration, redemption period, redeemable event,  todo list, quests list.</p>
@@ -162,6 +160,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/event.png" class="img-fluid" alt="Command respond example">
 
                 <p id="market" class="pb-2 border-bottom"><strong>Market</strong> - <code class="text-primary">!market [item name]</code></p>              
                 <p>Check item price on marketplace.<br />Contains: updated, price each, price lowest.</p>
@@ -178,6 +177,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/market.png" class="img-fluid" alt="Command respond example">
 
                 <p id="bid" class="pb-2 border-bottom"><strong>Smart Bid</strong> - <code class="text-primary">!bid [player count] [item price/item name]</code></p>              
                 <p>Get a calculation how much you should bid for an item. You can use item name if it's available.<br />Contains: max bid for personal use, max bid for market.</p>
@@ -198,6 +198,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/bid.png" class="img-fluid" alt="Command respond example">
 
                 <p id="weekly" class="pb-2 border-bottom"><strong>Weekly</strong> - <code class="text-primary">!weekly</code></p>              
                 <p>Current weekly challange data.<br />Contains: rewards, quests name, quests location.</p>
@@ -208,6 +209,7 @@
                 </p>
 
                 <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/weekly.png" class="img-fluid" alt="Command respond example">
               </div>
             </div>
 
@@ -305,10 +307,7 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting twitter #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting twitter disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting twitter disable</code><br />
                   Example: <code class="text-primary">!settings twitter #news</code>
                 </p>
 
@@ -317,10 +316,7 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting koldrak #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting koldrak disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting koldrak disable</code><br />
                   Example: <code class="text-primary">!settings koldrak #koldrak</code>
                 </p>
 
@@ -329,10 +325,7 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting hunter [#channel-name]</code><br />
-                  Disable: <code class="text-primary">!setting hunter disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting hunter disable</code><br />
                   Example: <code class="text-primary">!settings hunter #hunter</code>
                 </p>
 
@@ -341,26 +334,41 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting reset [#channel-name]</code><br />
-                  Disable: <code class="text-primary">!setting reset disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting reset disable</code><br />
                   Example: <code class="text-primary">!settings reset #dailies-weeklies</code>
                 </p>
 
-                <!-- TODO: UPDATE 
-                <p id="newmember" class="font-weight-bold">New Member - <code class="text-primary">!settings </code></p>
-                <p>UPDATE ASAP</p>  
+                <p id="newmember" class="font-weight-bold">New Member - <code class="text-primary">!settings</code></p>
+                <p>Customizing <em>"new member welcome system"</em>.</p>  
                 
+                <p class="font-weight-bold">Selecting Channel</p>
                 <p>
-                  Add/Change: -<br />
-                  Disable: -
+                  Add/Change: <code class="text-primary">!setting welcome channel #channel-name</code><br />
+                  Disable: <code class="text-primary">!setting welcome channel disable</code><br />
+                  Example: <code class="text-primary">!setting welcome channel #welcome</code>
                 </p>
 
+                <p class="font-weight-bold">Selecting Follow-up Channel (where member go after doing join commands) <span class="badge badge-warning">Deprecated Warning: soon to be moved to joinmsg</span></p>
                 <p>
-                  Example: -
+                  Add/Change: <code class="text-primary">!setting welcome followup #channel-name</code><br />
+                  Disable: <code class="text-primary">!setting welcome followup disable</code><br />
+                  Example: <code class="text-primary">!setting welcome followup #general</code>
                 </p>
-                -->
+
+                <p class="font-weight-bold">Selecting Member Role <span class="badge badge-warning">Deprecated Warning: soon to be moved to joinmsg</span></p>
+                <p>
+                  Add/Change: <code class="text-primary">!setting welcome role #role-name</code><br />
+                  Disable: <code class="text-primary">!setting welcome role disable</code><br />
+                  Example: <code class="text-primary">!setting welcome role @member</code>
+                </p>
+
+                <p class="font-weight-bold">Changing Welcome Message</p>
+                <p>
+                  Add/Change: <code class="text-primary">!setting welcome msg message here</code><br />
+                  Disable: <code class="text-primary">!setting welcome msg disable</code><br />
+                  Example: <code class="text-primary">!setting welcome msg Hello! Welcome to our server!</code><br />
+                  Note: To add member name use <code class="text-primary">MEMBER_NAME</code>, to add server name use <code class="text-primary">SERVER_NAME</code> to add bot prefix use <code class="text-primary">BOT_PREFIX</code>.
+                </p>
 
                 <p id="joinmsg" class="font-weight-bold my-0">Join Message - <code class="text-primary">!settings joinmsg [Your message here]</code></p>
                 <p>Change welcome message when user did <code class="text-primary">!join</code> command.<br />
@@ -368,10 +376,7 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting joinmsg #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting joinmsg disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting joinmsg disable</code><br />
                   Example: <code class="text-primary">!settings joinmsg #news</code>
                 </p>
 
@@ -382,10 +387,7 @@
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting admin @role-name</code><br />
-                  Disable: <code class="text-primary">!setting admin disable</code>
-                </p>
-
-                <p>
+                  Disable: <code class="text-primary">!setting admin disable</code><br />
                   Example: <code class="text-primary">!settings admin @admin</code>
                 </p>
               </div>
@@ -394,9 +396,7 @@
               <h4 class="post-title font-weight-light container-fluid m-0 px-3 py-2 border-bottom bg-primary text-light">Utility</h4>
               <div class="post-content py-2 px-4">        
                 <p id="ping" class="pb-2 border-bottom"><strong>Bot Ping</strong> - <code class="text-primary">!ping</code></p>              
-                <p>Show current bot ping to Discord server.</p>
-
-                <p>
+                <p>Show current bot ping to Discord server.<br />
                   Example: <code class="text-primary">!ping</code>
                 </p>
 
