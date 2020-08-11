@@ -57,7 +57,7 @@
               <a class="side-header p-1 text-decoration-none font-weight-bold" href="#guild-commands">Guild</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#nickname">Change Nickname</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#reactrole">Reaction Role</a>
-              <a class="side-items p-1 text-decoration-none text-dark" href="#settings">Settings (Daily and Weekly Reset, BnS Twitter Feed)</a>
+              <a class="side-items p-1 text-decoration-none text-dark" href="#setting">setting (Daily and Weekly Reset, BnS Twitter Feed)</a>
               <a class="side-header p-1 text-decoration-none font-weight-bold" href="#utility-commands">Utility</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#ping">Ping</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#prefix">Prefix</a>
@@ -70,6 +70,7 @@
               <h4 class="post-title font-weight-light container-fluid m-0 px-3 py-2 border-bottom bg-primary text-light">Introduction</h4>
               <div class="post-content py-2 px-4">
                 <p>Made using <a target="_blank" href="https://discord.js.org/">Discord.js</a>, <a target="_blank" href="https://github.com/discordjs/Commando">Commando Framework</a> and <a target="_blank" href="https://www.mongodb.com/">MongoDB</a> database system.<br /></p>
+                <p>If you need any help, feel free to contact me on Discord <code class="text-primary">ln2r#1691</code></p>
 
                 <p>Invite URL: <a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=427677590359375873&permissions=470150208&scope=bot"><code>Click Here!</code></a></p>
               </div>               
@@ -294,74 +295,60 @@
                   Example: <code class="text-primary">!rremove 💖</code>
                 </p>
 
-                <p id="settings" class="pb-2 border-bottom"><strong>Settings</strong> - <code class="text-primary">!settings</code></p>              
+                <p id="setting" class="pb-2 border-bottom"><strong>setting</strong> - <code class="text-primary">!setting</code></p>              
                 <p>Adding daily, weekly reset notification or Blade and Soul twitter feed to your server.</p>
                 
-                <p id="show" class="font-weight-bold my-0">Show Current Settings - <code class="text-primary">!settings show</code></p>
-                <p>Showing current settings.</p>             
+                <p id="show" class="font-weight-bold my-0">Show Current setting - <code class="text-primary">!setting show</code></p>
+                <p>Showing current setting.</p>             
 
                 <p>
-                  Example: <code class="text-primary">!settings show</code>
+                  Example: <code class="text-primary">!setting show</code>
                 </p>
 
-                <p id="twitter" class="font-weight-bold my-0">Twitter Feed - <code class="text-primary">!settings twitter [#channel-name]</code></p>
+                <p id="twitter" class="font-weight-bold my-0">Twitter Feed - <code class="text-primary">!setting twitter [#channel-name]</code></p>
                 <p>Selecting channel for Blade and Soul Twitter feed.</p>  
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting twitter #channel-name</code><br />
                   Disable: <code class="text-primary">!setting twitter disable</code><br />
-                  Example: <code class="text-primary">!settings twitter #news</code>
+                  Example: <code class="text-primary">!setting twitter #news</code>
                 </p>
 
-                <p id="koldrak" class="font-weight-bold my-0">Koldrak's Lair Access - <code class="text-primary">!settings koldrak [#channel-name]</code></p>
+                <p id="koldrak" class="font-weight-bold my-0">Koldrak's Lair Access - <code class="text-primary">!setting koldrak [#channel-name]</code></p>
                 <p>Selecting channel for Koldrak's Lair access notification.</p>  
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting koldrak #channel-name</code><br />
                   Disable: <code class="text-primary">!setting koldrak disable</code><br />
-                  Example: <code class="text-primary">!settings koldrak #koldrak</code>
+                  Example: <code class="text-primary">!setting koldrak #koldrak</code>
                 </p>
 
-                <p id="hunter" class="font-weight-bold my-0">Hunter's Refugee Access - <code class="text-primary">!settings hunter [#channel-name]</code></p>
+                <p id="hunter" class="font-weight-bold my-0">Hunter's Refugee Access - <code class="text-primary">!setting hunter [#channel-name]</code></p>
                 <p>Selecting channel for Hunter's Refugee access notification.</p>  
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting hunter [#channel-name]</code><br />
                   Disable: <code class="text-primary">!setting hunter disable</code><br />
-                  Example: <code class="text-primary">!settings hunter #hunter</code>
+                  Example: <code class="text-primary">!setting hunter #hunter</code>
                 </p>
 
-                <p id="reset" class="font-weight-bold my-0">Challenges Reset and Event Summary - <code class="text-primary">!settings reset [#channel-name]</code></p>
+                <p id="reset" class="font-weight-bold my-0">Challenges Reset and Event Summary - <code class="text-primary">!setting reset [#channel-name]</code></p>
                 <p>Selecting channel for daily, weekly and event summary feed.</p>  
                 
                 <p>
                   Add/Change: <code class="text-primary">!setting reset [#channel-name]</code><br />
                   Disable: <code class="text-primary">!setting reset disable</code><br />
-                  Example: <code class="text-primary">!settings reset #dailies-weeklies</code>
+                  Example: <code class="text-primary">!setting reset #dailies-weeklies</code>
                 </p>
 
-                <p id="newmember" class="font-weight-bold">New Member - <code class="text-primary">!settings</code></p>
+                <p id="newmember" class="font-weight-bold">New Member - <code class="text-primary">!setting</code></p>
                 <p>Customizing <em>"new member welcome system"</em>.</p>  
                 
                 <p class="font-weight-bold">Selecting Channel</p>
                 <p>
-                  Add/Change: <code class="text-primary">!setting welcome channel #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting welcome channel disable</code><br />
-                  Example: <code class="text-primary">!setting welcome channel #welcome</code>
-                </p>
-
-                <p class="font-weight-bold">Selecting Follow-up Channel (where member go after doing join commands) <span class="badge badge-warning">Deprecated Warning: soon to be moved to joinmsg</span></p>
-                <p>
-                  Add/Change: <code class="text-primary">!setting welcome followup #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting welcome followup disable</code><br />
-                  Example: <code class="text-primary">!setting welcome followup #general</code>
-                </p>
-
-                <p class="font-weight-bold">Selecting Member Role <span class="badge badge-warning">Deprecated Warning: soon to be moved to joinmsg</span></p>
-                <p>
-                  Add/Change: <code class="text-primary">!setting welcome role #role-name</code><br />
-                  Disable: <code class="text-primary">!setting welcome role disable</code><br />
-                  Example: <code class="text-primary">!setting welcome role @member</code>
+                  Add/Change: <code class="text-primary">!setting welcome ch #channel-name</code><br />
+                  Disable: <code class="text-primary">!setting welcome ch disable</code><br />
+                  Example: <code class="text-primary">!setting welcome ch #welcome</code>
                 </p>
 
                 <p class="font-weight-bold">Changing Welcome Message</p>
@@ -372,17 +359,31 @@
                   Note: To add member name use <code class="text-primary">MEMBER_NAME</code>, to add server name use <code class="text-primary">SERVER_NAME</code> to add bot prefix use <code class="text-primary">BOT_PREFIX</code>.
                 </p>
 
-                <p id="joinmsg" class="font-weight-bold my-0">Join Message - <code class="text-primary">!settings joinmsg [Your message here]</code></p>
+                <p class="font-weight-bold">Selecting Follow-up Channel (where member go after doing join commands)</p>
+                <p>
+                  Add/Change: <code class="text-primary">!setting join ch #channel-name</code><br />
+                  Disable: <code class="text-primary">!setting join ch disable</code><br />
+                  Example: <code class="text-primary">!setting join ch #general</code>
+                </p>
+
+                <p class="font-weight-bold">Selecting Member Role <span class="badge badge-warning"></p>
+                <p>
+                  Add/Change: <code class="text-primary">!setting join role #role-name</code><br />
+                  Disable: <code class="text-primary">!setting join role disable</code><br />
+                  Example: <code class="text-primary">!setting join role @member</code>
+                </p>
+
+                <p id="joinmsg" class="font-weight-bold my-0">Join Message - <code class="text-primary">!setting joinmsg [Your message here]</code></p>
                 <p>Change welcome message when user did <code class="text-primary">!join</code> command.<br />
                   Note: If you want to mention the message author use MESSAGE_AUTHOR, and SERVER_NAME when you want to add the server name.</p>  
                 
                 <p>
-                  Add/Change: <code class="text-primary">!setting joinmsg #channel-name</code><br />
-                  Disable: <code class="text-primary">!setting joinmsg disable</code><br />
-                  Example: <code class="text-primary">!settings joinmsg #news</code>
+                  Add/Change: <code class="text-primary">!setting join msg #channel-name</code><br />
+                  Disable: <code class="text-primary">!setting join msg disable</code><br />
+                  Example: <code class="text-primary">!setting join msg #news</code>
                 </p>
 
-                <p id="adminrole" class="font-weight-bold my-0">Bot Admin Role - <code class="text-primary">!settings admin [@role-name]</code></p>
+                <p id="adminrole" class="font-weight-bold my-0">Bot Admin Role - <code class="text-primary">!setting admin [@role-name]</code></p>
                 <p>Selecting roles which can use administrative level commands.<br />
                   Note: Guild/Server owner will always have permission regardles having the roles or not.
                 </p>  
@@ -390,7 +391,7 @@
                 <p>
                   Add/Change: <code class="text-primary">!setting admin @role-name</code><br />
                   Disable: <code class="text-primary">!setting admin disable</code><br />
-                  Example: <code class="text-primary">!settings admin @admin</code>
+                  Example: <code class="text-primary">!setting admin @admin</code>
                 </p>
               </div>
             </div>
