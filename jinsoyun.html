@@ -48,11 +48,7 @@
               <a class="side-items p-1 text-decoration-none text-dark" href="#market">Market</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#bid">Smart Bid</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#weekly">Weekly Challenges</a>
-              <!-- hidden commands
-              <a class="side-items p-1 text-decoration-none text-dark" href="#shackledisle">Shackled Isle</a>
-              <a class="side-items p-1 text-decoration-none text-dark" href="#koldrak">koldrak's Lair</a>
-              <a class="side-items p-1 text-decoration-none text-dark" href="#grandharvest">Grand Harvset Raid</a>
-              -->
+              <a class="side-items p-1 text-decoration-none text-dark" href="#access">Time Restricted Dungeon Access Checker</a>
 
               <a class="side-header p-1 text-decoration-none font-weight-bold" href="#guild-commands">Guild</a>
               <a class="side-items p-1 text-decoration-none text-dark" href="#nickname">Change Nickname</a>
@@ -207,6 +203,7 @@
 
                 <p id="weekly" class="pb-2 border-bottom"><strong>Weekly</strong> - <code class="text-primary">!weekly</code></p>              
                 <p>Current weekly challange data.<br />Contains: rewards, quests name, quests location.</p>
+                
 
                 <p>
                   Aliases: <code class="text-primary">wc</code><br />
@@ -215,6 +212,22 @@
 
                 <p><u>Respond Example:</u></p>
                 <img src="assets/jinsoyun/weekly.png" class="img-fluid" alt="Command respond example">
+
+                <p id="access" class="pb-2 border-bottom"><strong>Time Restricted Dungeon Access Checker</strong> - <code class="text-primary">!access [name]</code></p>              
+                <p>How long until next access.<br />Contains: time remaining.</p>
+
+                <p>Available parameters:
+                  <ul class="p-0 m-0 list-unstyled">
+                    <li><code class="text-primary">[name]</code> <span class="badge badge-danger">Required</span>: Dungeon name (<code class="text-primary">koldrak</code>, <code class="text-primary">hunter</code>, <code class="text-primary">harvest</code>).</li>
+                  </ul>
+                </p>
+
+                <p>
+                  Example: <code class="text-primary">!access koldrak</code>
+                </p>
+
+                <p><u>Respond Example:</u></p>
+                <img src="assets/jinsoyun/access.png" class="img-fluid" alt="Command respond example">
               </div>
             </div>
 
