@@ -1,0 +1,107 @@
+{
+  "skills": [
+    {
+      "title": "languages",
+      "content": ["JavaScript", "HTML", "CSS/Sass", "Python", "PHP", "SQL"]
+    },
+    {
+      "title": "frameworks",
+      "content": ["Bootstrap", "Express", "React.JS", "Next.JS"]
+    },
+    {
+      "title": "database",
+      "content": ["MySQL", "SQLite", "MongoDB"]
+    },
+    {
+      "title": "tools",
+      "content": ["Figma", "Postman", "Git & GitHub"]
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Dinas Komunikasi dan Informasi Jawa Barat",
+      "postition": "Apprenticeship",
+      "duration": "March 2019 - April 2019",
+      "description": "Developed a website for Bidang Persandian dan Kemanan Sistem Informasi using PHP and MySQL"
+    },
+    {
+      "title": "PT. Adhiyasa Rekamandiri Sistem Integrasi",
+      "postition": "Apprenticeship",
+      "duration": "February 2013 – March 2013",
+      "description": "Developed a Visual Basic 6.0 based database integrated software using Visual Basic 6.0 built in DBMS."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Academy Graduate - AWS Academy Cloud Developing",
+      "organization": "Amazon Web Service (AWS)",
+      "issued": "July 2021"
+    },
+    {
+      "title": "AWS Academy Graduate - AWS Academy Cloud Foundations",
+      "organization": "Amazon Web Service (AWS)",
+      "issued": "June 2021"
+    },
+    {
+      "title": "Certificate of Competence in Programming and Software Development",
+      "organization": "Badan Nasional Sertifikasi Profesi",
+      "issued": "January 2021 - January 2024"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Cardboard",
+      "duration": "April 2021 - Present",
+      "description": "A simple file hosting service. Made to move files easier between device without hooking some cables.",
+      "tags": ["Next.JS", "SQLite"],
+      "url": []
+    },
+    {
+      "title": "Diabetes Patient SSVM Classification",
+      "duration": "September 2020 - March 2021",
+      "description": "Made for undergraduate thesis. This program use machine learning to determine if the patient have risk of having diabetes or not by reading the patient diagnosis data.",
+      "tags": ["Python", "Machine Learning", "SSVM"],
+      "url": []
+    },
+    {
+      "title": "division-builds-scrapper",
+      "duration": "March 2021",
+      "description": "Created to scrap data from division-builds.com using puppeteer.",
+      "tags": ["Puppeteer", "Node.JS"],
+      "url": [
+        {
+          "link": "https://github.com/ln2r/division-builds-scrapper",
+          "text": "division-builds-scrapper (GitHub)"
+        }
+      ]
+    },
+    {
+      "title": "Jinsoyun",
+      "duration": "November 2018 - December 2020",
+      "description": "A Discord bot made for clanmates at first but grow on scale to serve several servers. This bot enables users to check the items marketplace data, quests, and character informations.",
+      "tags": ["Discord", "Node.JS", "MongoDB", "MERN"],
+      "url": [
+        {
+          "link": "https://github.com/ln2r/jinsoyun",
+          "text": "Jinsoyun Bot (GitHub)"
+        },
+        {
+          "link": "https://github.com/ln2r/jinsoyun-backend",
+          "text": "Backend (GitHub)"
+        }
+      ]
+    },
+    {
+      "title": "Irine",
+      "duration": "October 2020",
+      "description": "A simple DragonNest mission board tracker. Created to make it easier for our group to track which quests in the mission board we have to do.",
+      "tags": ["Discord", "Node.JS"],
+      "url": [
+        {
+          "link": "https://github.com/ln2r/irine",
+          "text": "Irine Bot (GitHub)"
+        }
+      ]
+    }   
+  ]  
+}

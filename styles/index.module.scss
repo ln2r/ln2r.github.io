@@ -1,0 +1,252 @@
+$primary-colour: #2F80ED;
+$secondary-colour: #2D9CDB;
+$highlight-colour: #FFFFFF;
+$primary-border: solid 1px;
+$primary-weight: 200;
+$primary-weight-bold: 650;
+
+.header {
+  padding: 30vh 0 0 10rem;
+  background-color: $secondary-colour;
+  color: $highlight-colour;
+  min-height: 100vh;
+
+  h1 {
+    font-weight: $primary-weight;    
+    margin: 0;
+    font-size: 2em;
+    max-width: 50rem;
+
+    @media (max-width: 700px) {
+      .details {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 20pt;
+    max-width: 45rem;
+  }
+
+  a {
+    border: $primary-border;
+    border-color: $highlight-colour;
+    border-radius: 2px;
+    color: $highlight-colour;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    padding: 1rem;
+    min-height: 4rem;
+
+    a, br{
+      display: none;
+    }
+  }
+}
+
+.contentWrapper {  
+  border-bottom: $primary-border;
+  border-color: $primary-colour;
+  padding: 5rem 6rem 0 6rem; 
+
+  @media (max-width: 700px) {
+    padding: 1rem;
+  }
+
+  .backgroundWrapper, 
+  .skillsWrapper,
+  .experiencesWrapper,
+  .certificationsWrapper,
+  .projectsWrapper { 
+    margin-bottom: 3rem;
+    display: inline-grid;      grid-template-columns: 7rem auto; 
+    
+    @media (max-width: 700px) {
+      margin-bottom: 1.5rem;
+    }
+    .title {
+      text-align: right;
+      padding-right: 1rem;
+      
+      h1 {
+        font-weight: $primary-weight-bold;
+        font-size: 1em;
+        color: $primary-colour;
+
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .content {
+      p {
+        font-size: 1em;
+        text-align: justify;
+
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: auto;
+
+      .title {
+        h1 {
+          text-align: left;
+        }
+      }
+
+      .content {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+
+  .skillsWrapper {
+    .content {
+      display: inline-grid;      grid-template-columns: auto auto auto auto;
+
+      @media (max-width: 700px) {
+        grid-template-columns: auto auto;
+      }
+
+      .contentList {
+        min-width: 10rem;
+        h1 {
+          text-transform: capitalize;
+          font-weight: $primary-weight-bold;
+          font-size: 1em;
+
+          margin: 0;
+          padding: 0;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .experiencesWrapper, 
+  .certificationsWrapper,
+  .projectsWrapper {
+    width: 100%;
+
+    .content {
+      .contentList {
+        margin-bottom: 2rem;
+
+        @media (max-width: 700px) {
+          margin-bottom: 1.5rem;
+        }
+        .meta {
+          display: inline-grid;
+          grid-template-columns: 60% auto;
+          width: 100%;
+
+          @media (max-width: 700px) {
+            grid-template-columns: auto;
+          }
+
+          h1 {
+            text-transform: capitalize;
+            font-weight: $primary-weight-bold;
+            font-size: 1em;
+            float: left;
+    
+            margin: 0;
+            padding: 0;
+          }
+  
+          p {
+            text-align: right;
+
+            @media (max-width: 700px) {
+              text-align: left;
+            }
+          }
+        }
+
+        p {
+          
+          max-width: 50rem;
+        }
+  
+        ul {
+          margin: 0;
+
+          @media (max-width: 700px) {
+            padding-left: 1.5rem;
+          }
+        }
+
+        .url {
+          display: inline-grid;
+          grid-template-columns: auto auto;
+          grid-column-gap: 0.5rem;
+
+          a {
+            color: $primary-colour;
+            text-decoration: none;
+          }
+        }
+
+        .tags {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          grid-column-gap: 0.5rem;
+          padding-top: 0.5rem;
+
+          span {
+            color: $primary-colour;
+            border: $primary-border;
+            border-color: $primary-colour;
+            border-radius: 2px;
+            padding: 0 0.5rem 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  background-color: $primary-colour;
+
+  @media (max-width: 700px) {
+    grid-template-columns: auto;
+  }
+  
+  div {
+    padding: 0.5rem;
+  }
+
+  .socials {
+    margin-top: 0.6rem;
+    text-align: right;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  a {
+    color: $highlight-colour;
+    text-decoration: none;
+  }
+}
