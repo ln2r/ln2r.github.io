@@ -1,9 +1,9 @@
-# ln2r.github.io
+# Personal Page - ln2r.github.io
 
 [![Build Status](https://travis-ci.com/ln2r/ln2r.github.io.svg?branch=master)](https://travis-ci.com/ln2r/ln2r.github.io)
 
 Simple portofolio pages made using Next.JS
-Contains:
+### Contains:
 - Background
 - Skills
 - Experiences
@@ -12,6 +12,6 @@ Contains:
 
 Deployed and built using Travis CI and GitHub Pages.
 
-Credits
+### Credits
 - [Made by ln2r](https://github.com/ln2r)
 - [Inspired by Brittany Chiang](https://github.com/bchiang7)
