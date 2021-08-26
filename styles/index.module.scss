@@ -1,6 +1,7 @@
 $primary-colour: #2F80ED;
 $secondary-colour: #2D9CDB;
 $highlight-colour: #FFFFFF;
+$accent-colour: lightgrey;
 $primary-border: solid 1px;
 $primary-weight: 200;
 $primary-weight-bold: 650;
@@ -36,6 +37,7 @@ $primary-weight-bold: 650;
     border-radius: 2px;
     color: $highlight-colour;
     padding: 0 4px 0 4px;
+    margin-right: 0.5rem;
     text-decoration: none;
   }
 
@@ -217,6 +219,19 @@ $primary-weight-bold: 650;
             padding: 0 0.5rem 0 0.5rem;
           }
         }
+      }
+    }
+  }
+
+  .projectsWrapper {
+    .contentList {
+      border-radius: 5px 5px;
+
+      .imageContainer {
+        border-bottom: $primary-border $accent-colour;
+      }
+      .description {
+        padding: 0.5rem;
       }
     }
   }
