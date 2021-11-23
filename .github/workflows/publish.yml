@@ -27,7 +27,7 @@ jobs:
 
       # Getting node.js
       - name: Getting node.js
-        run: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2.4.1
         
       # Installing Dependencies
       - name: Installing Deps
