@@ -1,6 +1,6 @@
 # Personal Page - ln2r.github.io
 
-[![Build Status](https://travis-ci.com/ln2r/ln2r.github.io.svg?branch=master)](https://travis-ci.com/ln2r/ln2r.github.io)
+[![GitHub Pages Deployment](https://github.com/ln2r/ln2r.github.io/actions/workflows/publish.yml/badge.svg)](https://github.com/ln2r/ln2r.github.io/actions/workflows/publish.yml)
 
 Simple portofolio pages made using Next.JS
 ### Contains:
