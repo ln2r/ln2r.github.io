@@ -41,8 +41,9 @@ jobs:
       - name: Deploying
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with: 
-          GITHUB_TOKEN: ${{secrets.ACTIONS}}
           target_branch: gh-pages
           build_dir: out
           jekyll: false
           verbose: true
+        env:
+          GITHUB_TOKEN: ${{secrets.ACTIONS}}
