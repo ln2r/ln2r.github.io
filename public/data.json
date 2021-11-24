@@ -14,10 +14,16 @@
     },
     {
       "title": "tools",
-      "content": ["Figma", "Postman", "Git & GitHub"]
+      "content": ["Figma", "Postman", "Git & GitHub", "Sequelize", "Jest", "Swagger"]
     }
   ],
   "experiences": [
+    {
+      "title": "Walden Global Services",
+      "postition": "Developer",
+      "duration": "November 2021 - Present",
+      "description": "Responsible to develop various system and applications"
+    },
     {
       "title": "Dinas Komunikasi dan Informasi Jawa Barat",
       "postition": "Apprenticeship",

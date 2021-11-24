@@ -43,11 +43,9 @@ export default function Home({ userData }) {
             </div>
             <div className={styles.content}>
               <p>
-              A freshly graduated student from <b>Universitas Komputer Indonesia</b> with a bachelor degree in Informatic Engineering. 
+              A software engineering with bachelor degree in Informatic engineering, who <b>always eager to discover and learn new stuff</b>.
               <br /><br />
-              My experience in software engineering maybe isn&apos;t that much, but I <b>always eager to discover and learn new stuff</b> along the way. When making stuff I always try to have efficiency, ease to use, and scalability in mind. 
-              <br /><br />
-              <b>When I&apos;m not learning or making stuff</b>, You can find me adventuring around in Black Desert Online, or some other video games.
+              You can find me adventuring around in some video game like Black Desert Online, or other MMORPG games.
               </p>            
             </div>  
           </div>
