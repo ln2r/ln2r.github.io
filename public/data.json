@@ -56,6 +56,38 @@
   ],
   "projects": [
     {
+      "title": "Ina",
+      "duration": "May 2022 - Present",
+      "description": "Originally built as a simple world boss spawn notification bot, but modified and improved to track and see nodes information.",
+      "tags": ["Discord", "Node.JS", "Express", "TypeScript", "MongoDB"],
+      "url": [
+        {
+          "link": "https://github.com/ln2r/ina",
+          "text": "Ina Bot (GitHub)"
+        },
+        {
+          "link": "https://github.com/ln2r/ina-api",
+          "text": "Backend API (GitHub)"
+        }
+      ]
+    },
+    {
+      "title": "Jinsoyun",
+      "duration": "November 2018 - Present",
+      "description": "Blade and Soul related Discord bot, originally built for fellow clanmates Grumpy Butts.",
+      "tags": ["Discord", "Node.JS", "MongoDB", "Express", "TypeScript"],
+      "url": [
+        {
+          "link": "https://github.com/ln2r/jinsoyun",
+          "text": "Jinsoyun Bot (GitHub)"
+        },
+        {
+          "link": "https://github.com/ln2r/jinsoyun-api",
+          "text": "Backend API (GitHub)"
+        }
+      ]
+    },
+    {
       "title": "Cardboard",
       "duration": "April 2021 - Present",
       "description": "A simple file hosting service. Made to move files easier between device without hooking some cables.",
@@ -78,22 +110,6 @@
         {
           "link": "https://github.com/ln2r/division-builds-scrapper",
           "text": "division-builds-scrapper (GitHub)"
-        }
-      ]
-    },
-    {
-      "title": "Jinsoyun",
-      "duration": "November 2018 - December 2020",
-      "description": "A Discord bot made for clanmates at first but grow on scale to serve several servers. This bot enables users to check the items marketplace data, quests, and character informations.",
-      "tags": ["Discord", "Node.JS", "MongoDB", "MERN"],
-      "url": [
-        {
-          "link": "https://github.com/ln2r/jinsoyun",
-          "text": "Jinsoyun Bot (GitHub)"
-        },
-        {
-          "link": "https://github.com/ln2r/jinsoyun-backend",
-          "text": "Backend (GitHub)"
         }
       ]
     },
