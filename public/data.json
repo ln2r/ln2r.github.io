@@ -62,7 +62,7 @@
   "projects": [
     {
       "title": "Ina",
-      "duration": "May 2022 - Present",
+      "duration": "May 2020 - Present",
       "description": "Black Desert Online related Discord bot. Originally built as a simple world boss spawn notification bot.",
       "tags": ["Discord", "Node.JS", "Express", "TypeScript", "MongoDB"],
       "url": [
