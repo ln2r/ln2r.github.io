@@ -39,6 +39,11 @@
   ],
   "certifications": [
     {
+      "title": "Belajar Langkah Fundamental Untuk Menjadi Web Programmer",
+      "organization": "Hactiv8",
+      "issued": "October 2021"
+    },
+    {
       "title": "AWS Academy Graduate - AWS Academy Cloud Developing",
       "organization": "Amazon Web Service (AWS)",
       "issued": "July 2021"
@@ -58,7 +63,7 @@
     {
       "title": "Ina",
       "duration": "May 2022 - Present",
-      "description": "Originally built as a simple world boss spawn notification bot, but modified and improved to track and see nodes information.",
+      "description": "Black Desert Online related Discord bot. Originally built as a simple world boss spawn notification bot.",
       "tags": ["Discord", "Node.JS", "Express", "TypeScript", "MongoDB"],
       "url": [
         {
@@ -75,7 +80,7 @@
       "title": "Jinsoyun",
       "duration": "November 2018 - Present",
       "description": "Blade and Soul related Discord bot, originally built for fellow clanmates Grumpy Butts.",
-      "tags": ["Discord", "Node.JS", "MongoDB", "Express", "TypeScript"],
+      "tags": ["Discord", "Node.JS", "Express", "TypeScript", "MongoDB"],
       "url": [
         {
           "link": "https://github.com/ln2r/jinsoyun",
