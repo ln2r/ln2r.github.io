@@ -1,10 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/index.module.scss'
-import Image from 'next/image'
-
-const imageLoader = ({src}) => {
-  return `https://i.imgur.com/${src}`
-}
 
 
 export function getStaticProps() {
@@ -112,10 +107,7 @@ export default function Home({ userData }) {
               {
                 userData.projects.map((project, index) => {
                   return <div key={`skill-${index}`} className={styles.contentList}>
-                    {/* only show demo if its exist */}
-                    {(project.demo)? <div key={`skill-image-container-${index}`} className={styles.imageContainer}>
-                      <Image loader={imageLoader} src="PpyAamr.png" alt="Project GIF demo should be here." width={1200} height={400} />
-                    </div> : ""}
+                    {/*TODO: image demo */}
 
                     <div className={styles.description}>
                       <span className={styles.meta}><h1>{project.title}</h1><p>{project.duration}</p></span>                    
