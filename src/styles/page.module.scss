@@ -1,0 +1,91 @@
+@use 'colors' as *;
+
+.header {
+  div {
+    text-align: right;
+
+    p {
+      font-size: small;
+      color: $gray-6;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: uppercase; 
+      margin: 0;
+    }
+  }
+}
+
+.title {
+  padding-top: 30vh;
+  color: $gray-6;
+  font-weight: 100;
+
+  h1 {
+    font-size: 48pt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: lowercase;
+    margin: 0; 
+  }
+
+  p {
+    font-size: small;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    margin: 0; 
+  }
+}
+
+.footer {
+  position: fixed;
+  color: $gray-6;
+  font-weight: 100;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  margin: 0 4em 4em 0;
+
+  p {
+    font-size: small;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal; 
+
+    a {
+      color: $gray-6;
+      text-decoration: underline;
+    }
+  }
+}
+
+.main {
+  color: $gray-6;
+  font-size: small;
+  max-width: 50em;
+
+  .content {
+    ul {
+      padding: 0 0 0 1em;
+      margin: 0;
+      li {
+        margin: 0.5em;
+        list-style-type: none;
+        font-weight: bold;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.super {
+  font-size: medium;
+  font-style: italic;
+}
