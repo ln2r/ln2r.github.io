@@ -1,0 +1,78 @@
+@use 'colors' as *;
+
+.title {
+  padding-top: 30vh;
+  color: $gray-6;
+  font-weight: 100;
+
+  h1 {
+    font-size: 48pt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: lowercase;
+    margin: 0; 
+  }
+
+  p {
+    font-size: small;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    margin: 0; 
+  }
+}
+
+.main {
+  color: $gray-6;
+  font-size: small;
+  max-width: 50em;
+
+  p::after {
+    content: '';
+    width: 6px;
+    height: 1px;
+    background: $gray-6;
+    display: inline-block;
+    animation: blink 1.5s steps(2) infinite;
+  }
+
+  .content {
+    ul {
+      padding: 0 0 0 1em;
+      margin: 0;
+      li {
+        margin: 0.5em;
+        list-style-type: none;
+        font-weight: bold;
+        width: fit-content;
+      }
+
+      li:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  a {
+    margin-left: 1em;
+    color: $gray-6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.super {
+  font-size: medium;
+  font-style: italic;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+}
