@@ -1,0 +1,47 @@
+@use 'colors' as *;
+
+.title {
+  color: $gray-6;
+  font-weight: 100;
+  margin-bottom: 1em;
+
+  h1 {
+    font-size: 48pt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: lowercase;
+    margin: 0; 
+  }
+
+  a {
+    text-decoration: none;
+    color: $gray-6;
+    font-size: small;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    margin: 0; 
+  }
+}
+
+.main {
+  color: $gray-6;
+  font-size: small;
+  // max-width: 50em;
+  max-height: 80vh;
+  margin-left: 0.8em;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.back {
+  color: $gray-6;
+  text-decoration: none;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
