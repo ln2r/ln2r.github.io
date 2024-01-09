@@ -28,13 +28,15 @@
   font-size: small;
   max-width: 50em;
 
-  p::after {
-    content: '';
-    width: 6px;
-    height: 1px;
-    background: $gray-6;
-    display: inline-block;
-    animation: blink 1.5s steps(2) infinite;
+  .subtitle {
+    p::after {
+      content: '';
+      width: 6px;
+      height: 1px;
+      background: $gray-6;
+      display: inline-block;
+      animation: blink 1.5s steps(2) infinite;
+    }
   }
 
   .content {
