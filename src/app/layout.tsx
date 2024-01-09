@@ -29,7 +29,8 @@ export default function RootLayout({
         </header>
         {children}
         <footer className='footer'>
-          <p>Inspired by <a href='https://p5aholic.me/'>Keita Yamada</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`${getRandom(3, RandomType.LETTERS)}-${today.getUTCFullYear()}${today.getUTCMonth()}${today.getUTCDate()}-${getRandom(12, RandomType.MIXED)}`}</p>
+          <p>Inspired by <a href='https://p5aholic.me/'>Keita Yamada</a></p>
+          <p>{`${getRandom(3, RandomType.LETTERS)}-${today.getUTCFullYear()}${today.getUTCMonth()}${today.getUTCDate()}-${getRandom(12, RandomType.MIXED)}`}</p>
         </footer>
       </body>
     </html>

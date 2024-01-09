@@ -58,11 +58,16 @@ body {
   text-align: right;
   margin: 0 4em 4em 0;
 
+  @media only screen and (max-width: 600px) {
+    position: relative;
+  }
+
   p {
     font-size: small;
     font-style: normal;
     font-weight: 300;
     line-height: normal; 
+    margin: 0;
 
     a {
       color: $gray-6;

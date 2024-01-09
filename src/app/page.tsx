@@ -15,7 +15,8 @@ export default function Home() {
         <div className={styles.subtitle}>
           <p>Dragged into digital world and software engineering realms thanks to video games and endless free time. Currently working full time as Back-End Developer.&nbsp;&nbsp;</p>
         </div>
-        <a href='/projects'>Projects</a>
+        <p><a href='/projects'>Projects</a></p>
+        <p><a href='https://github.com/ln2r'>Contact</a></p>
       </div>
       {/* main section */}
     </main>
