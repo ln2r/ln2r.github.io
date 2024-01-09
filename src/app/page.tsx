@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../styles/page.module.scss'
 import { inter_light } from '@/lib/fonts'
 
@@ -15,8 +16,8 @@ export default function Home() {
         <div className={styles.subtitle}>
           <p>Dragged into digital world and software engineering realms thanks to video games and endless free time. Currently working full time as Back-End Developer.&nbsp;&nbsp;</p>
         </div>
-        <p><a href='/projects'>Projects</a></p>
-        <p><a href='https://github.com/ln2r'>Contact</a></p>
+        <p><Link href='/projects'>Projects</Link></p>
+        <p><Link href='https://github.com/ln2r'>Contact</Link></p>
       </div>
       {/* main section */}
     </main>

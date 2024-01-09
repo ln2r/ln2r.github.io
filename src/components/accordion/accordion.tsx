@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { AccordionItem } from "./accordion.item";
 import './accordion.scss';
+import Link from "next/link";
 
 export const Accordion = ({data}: any) => {
   const max = 9999;
@@ -29,7 +30,7 @@ export const Accordion = ({data}: any) => {
               <p><strong>Url(s)</strong>:</p>
               <ul>
                 {
-                  item?.url?.map((u: any, index: number) => <li key={index}><a href={u.link}>{u.text}</a></li>)
+                  item?.url?.map((u: any, index: number) => <li key={index}><Link href={u.link}>{u.text}</Link></li>)
                 }
               </ul>
             </div> : ''
