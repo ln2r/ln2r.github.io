@@ -2,8 +2,8 @@ import { projects } from '@/lib/projects'
 import styles from '../../styles/projects.module.scss'
 import { inter_light } from '@/lib/fonts'
 import { Accordion } from '@/components/accordion/accordion'
-import { motion } from 'framer-motion'
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Projects - ln2rworks // ln2r',
@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       {/* title section */}
       <div className={`${styles.title} ${inter_light.className}`}> 
-        <a href='/'>&gt; ln2rworks // projects+</a>
+        <Link href='/'>&gt; ln2rworks // projects+</Link>
       </div>
       {/* title section */}
       {/* main section */}
@@ -23,7 +23,7 @@ export default function Home() {
         <Accordion data={projects} />
       </div>
       {/* main section */}
-      <a className={styles.back} href='/'>←</a>
+      <Link className={styles.back} href='/'>←</Link>
     </main>
   )
 }
