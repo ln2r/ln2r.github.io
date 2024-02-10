@@ -8,7 +8,6 @@ export default function Home() {
       {/* title section */}
       <div className={`${styles.title} ${inter_light.className}`}> 
         <h1>ln2rworks // <span className={styles.bold}>ln2r</span> <sup className={styles.super}>(el-en-too-ar)</sup></h1>
-        <p>Rizky Sedyanto - Developer</p>
       </div>
       {/* title section */}
       {/* main section */}
