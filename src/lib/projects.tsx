@@ -1,6 +1,6 @@
 export const projects = [
   {
-    "title": "Government Owned Enterprise E-Commerce",
+    "title": "Government Owned Enterprise E-Commerce Site",
     "date": "November 2022 - December 2023",
     "type": "Corporate",
     "description": "As full-time backend developer, mainly reponsible for payment service and various bug fixes",
@@ -8,7 +8,7 @@ export const projects = [
     "url": []
   },
   {
-    "title": "Freight Forwarder, Logistic Management",
+    "title": "Freight Forwarder, Logistic Management App",
     "date": "September 2022 - November 2022",
     "type": "Corporate",
     "description": "As full-time backend developer, responsible for developing new features",

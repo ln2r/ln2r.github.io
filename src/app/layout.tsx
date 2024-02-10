@@ -3,6 +3,7 @@ import '../styles/globals.scss'
 import { inter, redacted } from '@/lib/fonts'
 import { RandomType, getRandom } from '@/lib/random'
 import Link from 'next/link';
+import Transition from '@/components/transition/transition';
 
 const today = new Date();
 
@@ -28,7 +29,9 @@ export default function RootLayout({
             <p>PORT-2 - <span className={redacted.className}>{Math.floor(Math.random() * 1423)}</span></p>
           </div>
         </header>
-        {children}
+        <Transition>
+          {children}
+        </Transition>
         <footer className='footer'>
           <p>Inspired by <Link href='https://p5aholic.me/'>Keita Yamada</Link></p>
           <p>{`${getRandom(3, RandomType.LETTERS)}-${today.getUTCFullYear()}${today.getUTCMonth()}${today.getUTCDate()}-${getRandom(12, RandomType.MIXED)}`}</p>
