@@ -10,7 +10,7 @@
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    text-transform: lowercase;
+    // text-transform: lowercase;
     margin: 0; 
   }
 
@@ -71,6 +71,10 @@
 .super {
   font-size: medium;
   font-style: italic;
+}
+
+.red {
+  color: $red;
 }
 
 @keyframes blink {
