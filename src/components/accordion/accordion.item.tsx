@@ -1,6 +1,6 @@
 import React from "react";
 import './accordion.scss';
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -20,11 +20,6 @@ const container = {
   }
 }
 
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 }
-}
-
 export const AccordionItem = ({
   title,
   subtitle,
@@ -32,6 +27,7 @@ export const AccordionItem = ({
   onClick,
   open = false,
 }: Props) => {
+  const reducedMotion = useReducedMotion();
 
   return (
     <article key={`project-${title}`}>
@@ -44,7 +40,15 @@ export const AccordionItem = ({
       {open && (
         <motion.div 
           className="content"
-          variants={container}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: reducedMotion? 0 : 0.5
+              }
+            }
+          }}
         >
           <motion.div
             // variants={item}
