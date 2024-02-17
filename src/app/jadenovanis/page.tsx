@@ -98,7 +98,7 @@ export default function TestTransition() {
           <motion.div variants={item}>
             <h3>Stream</h3>
             <iframe
-                src="https://player.twitch.tv/?channel=jadenovanis&parent=localhost&muted=true"
+                src="https://player.twitch.tv/?channel=jadenovanis&parent=ln2r.github.io&muted=true"
                 height="600"
                 width="900"
                 allowFullScreen>
