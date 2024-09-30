@@ -8,8 +8,8 @@ import Transition from '@/components/transition/transition';
 const today = new Date();
 
 export const metadata: Metadata = {
-  title: 'Home - ln2rworks // ln2r',
-  description: 'Portofolio page for ln2rworks/ln2r',
+  title: 'ln2r // ln2rworks',
+  description: 'ln2r stuff here',
 }
 
 export default function RootLayout({
@@ -33,7 +33,6 @@ export default function RootLayout({
           {children}
         </Transition>
         <footer className='footer'>
-          <p>Inspired by <Link href='https://p5aholic.me/'>Keita Yamada</Link></p>
           <p>{`${getRandom(3, RandomType.LETTERS)}-${today.getUTCFullYear()}${today.getUTCMonth()}${today.getUTCDate()}-${getRandom(12, RandomType.MIXED)}`}</p>
         </footer>
       </body>

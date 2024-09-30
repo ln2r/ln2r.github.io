@@ -1,14 +1,25 @@
 @use 'colors' as *;
 
-.title {
-  padding-top: 30vh;
+.main_container {
+  padding-top: 10vh;
+  color: $gray-6;
+  display: flex;
+  text-align: justify;
+  width: 100%;
+  justify-content: center;
+}
+
+.content {
   color: $gray-6;
   font-weight: 100;
+  margin-left: 2em;
+  margin-top: 3em;
+  max-width: 40%;
 
   h1 {
-    font-size: 48pt;
+    font-size: 20pt;
     font-style: normal;
-    font-weight: 200;
+    font-weight: bold;
     line-height: normal;
     // text-transform: lowercase;
     margin: 0; 
@@ -17,9 +28,13 @@
   p {
     font-size: small;
     font-style: normal;
-    font-weight: 400;
     line-height: normal; 
     margin: 0; 
+  }
+
+  ul li {
+    color: $gray-6;
+    font-size: small;
   }
 }
 
