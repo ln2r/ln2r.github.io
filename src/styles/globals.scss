@@ -6,51 +6,143 @@ html {
 
 body {
   background-color: $black;
-  padding: 2em;
   overflow: hidden;
-}
 
-.header {
-  display: flex;
-  flex-direction: row;
-
-  div {
-    p {
-      font-size: small;
-      color: $gray-6;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      text-transform: uppercase; 
-      margin: 0;
-    }
+  a {
+    text-decoration: none;
+    color: $red;
   }
 
-  .left {
-    width: 50%;
-    text-align: left;
-
-    p {
-      .secret {
-        color: $green-3;
-        text-decoration: none;
-      }
-
-      .secret:hover {
-        cursor: pointer;
-      }
-    }
+  a:hover{
+    text-decoration: none;
+    color: $red;
   }
 
-  .right {
-    width: 50%;
-    text-align: right;
+  a:visited{
+    color: $red;
   }
 }
 
-.footer {
+main {
+  justify-content: center;
+  max-width: 45em;
+  margin: 0 auto 0 auto;
+  position: relative;
+
+  max-height: 75vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+
+  z-index: 20;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  .flavour {
+    background-color: $black;
+    display: flex;
+    flex-direction: row;
+    padding: 1em 1em 0 1em;
+  
+    div {
+      p {
+        font-size: small;
+        color: $gray-6;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase; 
+        margin: 0;
+      }
+    }
+  
+    .left {
+      width: 50%;
+      text-align: left;
+  
+      p {
+        .secret {
+          color: $green-3;
+          text-decoration: none;
+        }
+  
+        .secret:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  
+    .right {
+      width: 50%;
+      text-align: right;
+    }
+  }
+  
+  .info {
+    padding-top: 5vh;
+    color: $gray-6;
+    display: flex;
+    text-align: justify;
+    width: auto;
+    justify-content: center;
+  
+    @media only screen and (max-width: 600px) {
+      padding-top: 0;
+    }
+  
+    .cat {
+      width: 7em;
+  
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  
+    .name {
+      margin-left: -6em;
+      width: 30em;
+  
+      @media only screen and (max-width: 600px) {
+        margin-left: 0;
+      }
+  
+      h1 {
+        font-size: 20pt;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        margin-top: 1.5em;
+        text-align: center;
+      }
+    }
+  }
+  
+  .menu {
+    border-top: 1px solid $gray-2;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    max-width: 45em;
+    ul {
+      justify-content: center;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      
+      li {
+        text-align: center;
+        margin: 0 2.5em 0 2.5em;
+      }
+    }
+  }
+}
+
+footer {
   position: fixed;
-  color: $gray-6;
   font-weight: 100;
   bottom: 0;
   right: 0;
@@ -58,16 +150,29 @@ body {
   text-align: right;
   margin: 0 4em 4em 0;
 
-  @media only screen and (max-width: 600px) {
-    position: relative;
+  @media (min-width: 950px){
+    z-index: -10;
   }
 
-  p {
+  .cat {
+    color: $gray-1;
+
+    @media (min-width: 950px){
+      display: none;
+    }
+  }
+
+  .tag {
     font-size: small;
     font-style: normal;
     font-weight: 300;
     line-height: normal; 
     margin: 0;
+    color: $gray-6;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
 
     a {
       color: $gray-6;

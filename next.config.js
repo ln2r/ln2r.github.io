@@ -18,7 +18,19 @@ const nextConfig = {
    * @see https://nextjs.org/docs/pages/api-reference/components/image#unoptimized
    */
   images: {
-    unoptimized: true,
+    unoptimized: false,
+  },
+
+  /**
+   * mdx-editor stuff
+   */
+  transpilePackages: ['@mdxeditor/editor'],
+  webpack: (config) => {
+    // this will override the experiments
+    config.experiments = {...config.experiments, topLevelAwait: true}
+    // this will just update topLevelAwait property of config.experiments
+    // config.experiments.topLevelAwait = true
+    return config
   },
 };
 

@@ -1,14 +1,14 @@
 @use 'colors' as *;
 
-.title {
-  padding-top: 30vh;
+.content {
   color: $gray-6;
   font-weight: 100;
+  margin: 2em 3em 0 2em;
 
   h1 {
-    font-size: 48pt;
+    font-size: 20pt;
     font-style: normal;
-    font-weight: 200;
+    font-weight: bold;
     line-height: normal;
     // text-transform: lowercase;
     margin: 0; 
@@ -17,9 +17,13 @@
   p {
     font-size: small;
     font-style: normal;
-    font-weight: 400;
     line-height: normal; 
     margin: 0; 
+  }
+
+  ul li {
+    color: $gray-6;
+    font-size: small;
   }
 }
 
