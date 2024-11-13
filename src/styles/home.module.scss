@@ -1,20 +1,9 @@
 @use 'colors' as *;
 
-.main_container {
-  padding-top: 10vh;
-  color: $gray-6;
-  display: flex;
-  text-align: justify;
-  width: 100%;
-  justify-content: center;
-}
-
 .content {
   color: $gray-6;
   font-weight: 100;
-  margin-left: 2em;
-  margin-top: 3em;
-  max-width: 40%;
+  margin: 2em 3em 0 2em;
 
   h1 {
     font-size: 20pt;
