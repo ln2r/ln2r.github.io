@@ -1,4 +1,7 @@
 <script>
+    import {github} from "$lib/utils/github.js";
+
+    let projects = github();
 </script>
 
 <style>
@@ -42,25 +45,22 @@
 </style>
 
 <div class="content">
-    <p>a nerd who loves video games. mainly focused on backend development with occasional front end stuff. been active for around 7 years (4~years professionally).</p>
+    <p>a nerd who loves video games. mainly focused on backend development with occasional front end stuff. been active for around 7 years (4 years-ish professionally).</p>
 
     <div class="project-list">
         <h2>projects</h2>
-        <div class="project-item">
-            <h3>> name</h3>
-            <p>desc</p>
-            <small>tag a, tag b, tag c, tag d</small>
-        </div>
-        <div class="project-item">
-            <h3>> [archived] name </h3>
-            <p>desc</p>
-            <small>tag a, tag b, tag c, tag d</small>
-        </div>
-        <div class="project-item">
-            <h3>> name</h3>
-            <p>desc</p>
-            <small>tag a, tag b, tag c, tag d</small>
-        </div>
+        {#await projects}
+            {:then data}
+                {#each data as work}
+                    <div class="project-item">
+                        <h3>> {work.name}</h3>
+                        <p>{work.description ?? "no description added"}</p>
+                        <small>{work.tags.join (", ")}</small>
+                    </div>
+                {/each}
+            {:catch error}
+            <p>unable to fetch projects data, {error}</p>
+        {/await}
     </div>
 
     <div class="writing-list">
