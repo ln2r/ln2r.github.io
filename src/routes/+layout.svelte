@@ -24,11 +24,7 @@
         font-family: "JetBrains Mono", monospace;
         font-size: medium;
 
-        background: black;
-        color: white;
-
         a {
-            color: white;
             text-decoration: none;
         }
 
@@ -36,46 +32,6 @@
             color: cornflowerblue;
         }
     }
-
-    /*.flavour {*/
-    /*    background-color: black;*/
-    /*    display: flex;*/
-    /*    flex-direction: row;*/
-    /*    padding: 1em 1em 0 1em;*/
-
-    /*    div {*/
-    /*        p {*/
-    /*            font-size: small;*/
-    /*            color: darkgrey;*/
-    /*            font-style: normal;*/
-    /*            font-weight: 300;*/
-    /*            line-height: normal;*/
-    /*            text-transform: uppercase;*/
-    /*            margin: 0;*/
-    /*        }*/
-    /*    }*/
-
-    /*    .left {*/
-    /*        width: 50%;*/
-    /*        text-align: left;*/
-
-    /*        p {*/
-    /*            .secret {*/
-    /*                color: green;*/
-    /*                text-decoration: none;*/
-    /*            }*/
-
-    /*            .secret:hover {*/
-    /*                cursor: pointer;*/
-    /*            }*/
-    /*        }*/
-    /*    }*/
-
-    /*    .right {*/
-    /*        width: 50%;*/
-    /*        text-align: right;*/
-    /*    }*/
-    /*}*/
 
     .info {
         padding-top: 5vh;
@@ -172,7 +128,7 @@
             </div>
             <div class='name'>
                 <h3>ln2rworks</h3>
-                <p>backend dev</p>
+                <p>i do codes yes</p>
             </div>
         </div>
     </div>
