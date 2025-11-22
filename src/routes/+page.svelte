@@ -48,11 +48,14 @@
             text-align: justify;
             margin: 0;
         }
+        a {
+            text-decoration: none;
+        }
     }
 </style>
 
 <div class="content">
-    <p>heavily and mainly doing backend nodejs stuff, from backend api for professional use (work) to silly random app i make to make things i do easier. outside codes i love to play games, watch movies/anime, and read books.</p>
+    <p>heavily and mainly doing backend nodejs stuff, from professional use (work) to silly random app i make to make things easier. outside codes i love to play games, watch movies/anime, and read books.</p>
 
     <div class="project-list">
         <h2>stuff i did</h2>
@@ -75,19 +78,19 @@
         {/await}
     </div>
 
-    <div class="writing-list">
-        <h2>writings</h2>
-        <div class="writing-item">
-            <h3>/ name</h3>
-            <p>desc</p>
-            <small>tag a, tag b, tag c, tag d</small>
-        </div>
-    </div>
+<!--    <div class="writing-list">-->
+<!--        <h2>writings</h2>-->
+<!--        <div class="writing-item">-->
+<!--            <h3>/ name</h3>-->
+<!--            <p>desc</p>-->
+<!--            <small>tag a, tag b, tag c, tag d</small>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="contact-list">
         <h2>contacts</h2>
         <div class="contact-item">
-            <p>discord, github</p>
+            <p><a href="https://discord.com/users/132712988875423745">discord</a>, <a href="https://github.com/ln2r">github</a></p>
         </div>
     </div>
 </div>
