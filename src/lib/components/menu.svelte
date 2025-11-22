@@ -23,7 +23,7 @@
                 }
 
                 a:hover {
-                    color: white;
+                    color: royalblue;
                 }
             }
         }
