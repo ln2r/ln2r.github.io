@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "home",
+  "name": "homepage",
   "compatibility_date": "2025-11-25",
   "observability": {
     "enabled": true
