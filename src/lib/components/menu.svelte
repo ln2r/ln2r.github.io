@@ -7,6 +7,10 @@
         text-align: center;
         margin: 0 auto 0 auto;
         max-width: 45em;
+
+        @media only screen and (max-width: 600px) {
+            font-size: small;
+        }
         ul {
             justify-content: center;
             padding: 0;
@@ -33,7 +37,7 @@
 <div class="menu">
     <ul>
         <li><a href="/">home</a></li>
-        <li><a href="/">writings</a></li>
+        <li><a href="/blog">writings</a></li>
         <li><a href="https://github.com/ln2r">github</a></li>
     </ul>
 </div>

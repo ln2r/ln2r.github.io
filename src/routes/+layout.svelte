@@ -13,25 +13,17 @@
 </script>
 
 <style>
-    h3, p, a {
-        padding: 0;
-        margin: 0;
-    }
-
-    .redacted {
-        font-family: "Redacted", monospace;
-    }
-
     :global(body) {
         font-family: "JetBrains Mono", monospace;
         font-size: medium;
 
-        a {
-            text-decoration: none;
+        @media only screen and (max-width: 600px) {
+            font-size: small;
         }
 
-        a:hover {
-            color: cornflowerblue;
+        h3, p, a {
+            padding: 0;
+            margin: 0;
         }
     }
 
@@ -60,13 +52,6 @@
             @media only screen and (max-width: 600px) {
                 margin-left: 0;
             }
-
-            /*h1 {*/
-            /*    font-size: 20pt;*/
-            /*    font-style: normal;*/
-            /*    font-weight: bold;*/
-            /*    line-height: normal;*/
-            /*}*/
         }
     }
 
