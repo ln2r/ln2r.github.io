@@ -4,6 +4,10 @@
     let projects = github();
 </script>
 
+<svelte:head>
+    <title>ln2rworks</title>
+</svelte:head>
+
 <style>
     .content {
         width: 45em;
@@ -11,6 +15,7 @@
 
         @media only screen and (max-width: 600px) {
             width: 100%;
+            font-size: small;
         }
     }
 
@@ -78,14 +83,14 @@
         {/await}
     </div>
 
-<!--    <div class="writing-list">-->
-<!--        <h2>writings</h2>-->
-<!--        <div class="writing-item">-->
-<!--            <h3>/ name</h3>-->
-<!--            <p>desc</p>-->
-<!--            <small>tag a, tag b, tag c, tag d</small>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="writing-list">
+        <h2>writings</h2>
+        <div class="writing-item">
+            <h3>/ name</h3>
+            <p>desc</p>
+            <small>tag a, tag b, tag c, tag d</small>
+        </div>
+    </div>
 
     <div class="contact-list">
         <h2>contacts</h2>
