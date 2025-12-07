@@ -7,6 +7,8 @@
 
 This is a paragraph with **bold** and <em>mixed HTML</em>.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_Wille.png" width="700" alt="wille logo test"/>
+
 * List item with \`inline code\`
 * And a [link](https://svelte.dev)
   * With nested items
