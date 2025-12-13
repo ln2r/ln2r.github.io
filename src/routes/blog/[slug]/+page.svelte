@@ -1,23 +1,25 @@
 <script lang="ts">
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
 
-    const title = 'post title goes here'
-    const source = `
-    # This is a header
-
-This is a paragraph with **bold** and <em>mixed HTML</em>.
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_Wille.png" width="700" alt="wille logo test"/>
-
-* List item with \`inline code\`
-* And a [link](https://svelte.dev)
-  * With nested items
-  * Supporting full markdown
-    `
+    export let data;
+    function formatDate(date: Date) {
+        return new Intl.DateTimeFormat("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+        }).format(new Date(date));
+    }
 </script>
 
 <svelte:head>
-    <title>{title} / ln2rworks</title>
+    <title>ln2rworks</title>
+    {#await data.writing}
+    {:then data}
+        <title>{data.title} / ln2rworks</title>
+    {:catch error}
+    {/await}
 </svelte:head>
 
 <style>
@@ -48,10 +50,15 @@ This is a paragraph with **bold** and <em>mixed HTML</em>.
 </style>
 
 <div class="content">
-    <div class="title">
-        <h1>{title}</h1>
-        <small>{new Date().toDateString()}</small>
-    </div>
-
-    <SvelteMarkdown {source} />
+    {#await data.writing}
+        <p>getting writing...</p>
+        {:then data}
+            <div class="title">
+                <h1>{data.title}</h1>
+                <small>{formatDate(data.created)}</small>
+            </div>
+            <SvelteMarkdown source={data.body} />
+        {:catch error}
+        <p>oh no! {error}</p>
+    {/await}
 </div>
