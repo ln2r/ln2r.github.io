@@ -12,5 +12,8 @@
   "assets": {
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"
+  },
+  "vars": {
+    "PUBLIC_API_BASE": "https://mugunghwa.scorch-62.workers.dev"
   }
 }
