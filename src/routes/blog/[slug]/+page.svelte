@@ -25,7 +25,7 @@
 <style>
     .content {
         width: 45em;
-        margin: 4em auto 0 auto;
+        margin: 2em auto 4em auto;
 
         @media only screen and (max-width: 600px) {
             width: 100%;
