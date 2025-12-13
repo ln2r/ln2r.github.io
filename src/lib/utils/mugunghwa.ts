@@ -1,9 +1,11 @@
+import { PUBLIC_API_BASE } from '$env/static/public'
+
 export class Mugunghwa {
     constructor(private readonly fetchFn: typeof fetch = fetch) {}
 
     async works() {
         try {
-            const res = await this.fetchFn('http://localhost:8787/works');
+            const res = await this.fetchFn(`${PUBLIC_API_BASE}/works`);
             const items = await res.json();
 
             const chunk = 2;
@@ -24,7 +26,7 @@ export class Mugunghwa {
 
     async writings() {
         try {
-            const res = await this.fetchFn('http://localhost:8787/writings');
+            const res = await this.fetchFn(`${PUBLIC_API_BASE}/writings`);
             return await res.json();
         } catch (error) {
             console.error(error);
@@ -34,7 +36,7 @@ export class Mugunghwa {
 
     async writing(slug: string) {
         try {
-            const res = await this.fetchFn('http://localhost:8787/writing/' + slug);
+            const res = await this.fetchFn(`${PUBLIC_API_BASE}/writing/` + slug);
             return await res.json();
         } catch (error) {
             console.error(error);
