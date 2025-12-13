@@ -11,6 +11,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+    <title>writings / ln2rworks</title>
 </svelte:head>
 
 {@render children?.()}
