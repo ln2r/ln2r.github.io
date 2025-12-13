@@ -1,17 +1,7 @@
 <script>
-    import {Mugunghwa} from "$lib/utils/mugunghwa.ts";
-    import {onMount} from "svelte";
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
 
-    let mugunghwa = new Mugunghwa();
-
-    let projects = [];
-    let writings = [];
-
-    onMount(async () => {
-        projects = await mugunghwa.works()
-        writings = await mugunghwa.writings()
-    })
+    export let data;
 </script>
 
 <svelte:head>
@@ -86,7 +76,8 @@
 
     <div class="project-list">
         <h2>stuff i did</h2>
-        {#await projects}
+        {#await data.projects}
+            <p>getting stuff i did...</p>
             {:then data}
                 {#each data as group}
                     <div class="project-row">
@@ -107,12 +98,13 @@
 
     <div class="writing-list">
         <h2>writings</h2>
-        {#await writings}
+        {#await data.writings}
+            <p>getting writings...</p>
             {:then data}
                 {#if data.length > 0}
                     {#each data as writing}
                         <div class="writing-item">
-                            <h3>/ <a href={writing.title}>{writing.title}</a></h3>
+                            <h3>/ <a href="/blog/{writing.title}">{writing.title}</a></h3>
                             <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
                         </div>
                     {/each}

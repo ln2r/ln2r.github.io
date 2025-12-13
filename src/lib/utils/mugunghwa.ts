@@ -1,6 +1,8 @@
 export class Mugunghwa {
+    constructor(private readonly fetchFn: typeof fetch = fetch) {}
+
     async works() {
-        const res = await fetch('http://localhost:8787/works');
+        const res = await this.fetchFn('http://localhost:8787/works');
         const items = await res.json();
 
         const chunk = 2;
@@ -16,7 +18,7 @@ export class Mugunghwa {
     }
 
     async writings() {
-        const res = await fetch('http://localhost:8787/writings');
+        const res = await this.fetchFn('http://localhost:8787/writings');
         return await res.json();
     }
 }
