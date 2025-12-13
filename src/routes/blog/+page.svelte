@@ -72,7 +72,7 @@
                 {#if data.length > 0}
                     {#each data as writing}
                         <div class="writing-item">
-                            <h3>/ <a href="/blog/{writing.title}">{writing.title}</a></h3>
+                            <h3>/ <a href="/blog/{writing.slug}">{writing.title}</a></h3>
                             <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
                         </div>
                     {/each}
