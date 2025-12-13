@@ -41,6 +41,13 @@
         }
     }
 
+    .hero {
+        max-width: 40em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     div {
         p {
             text-align: justify;
@@ -53,6 +60,9 @@
     {#await data.writing}
         <p>getting writing...</p>
         {:then data}
+            {#if data.hero}
+                <img class="hero" src={data.hero} alt="hero"/>
+            {/if}
             <div class="title">
                 <h1>{data.title}</h1>
                 <small>{formatDate(data.created)}</small>
