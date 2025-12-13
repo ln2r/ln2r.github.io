@@ -1,9 +1,10 @@
 <script>
-</script>
+    import {Mugunghwa} from "$lib/utils/mugunghwa.js";
+    import SvelteMarkdown from "@humanspeak/svelte-markdown";
 
-<svelte:head>
-    <title>writings / ln2rworks</title>
-</svelte:head>
+    let mugunghwa = new Mugunghwa();
+    let writings = mugunghwa.writings();
+</script>
 
 <style>
     .content {
@@ -20,13 +21,17 @@
             text-align: justify;
             margin: 0;
         }
+
+        a {
+            text-decoration: none;
+        }
     }
 
     .writing-list {
         margin-top: 3em;
     }
 
-    .writing-item {
+   .writing-item {
         h3 {
             margin: 0;
         }
@@ -35,9 +40,22 @@
             margin-top: 1em;
             text-align: left;
         }
+    }
 
-        small {
-            color: cornflowerblue;
+    .writing-item {
+        width: auto;
+        display: flex;
+    }
+
+    .writing-item {
+        h3 {
+            padding-top: 1em;
+            width: 30%;
+        }
+        p {
+            width: 70%;
+            margin: 0;
+            padding: 0;
         }
     }
 </style>
@@ -48,11 +66,22 @@
     </div>
     <div class="body">
         <div class="writing-list">
-            <div class="writing-item">
-                <h3>title goes here</h3>
-                <p>snippets goes here</p>
-                <small>tag a, tag b, tag c, tag d</small>
-            </div>
+            {#await writings}
+                <p>getting writings...</p>
+            {:then data}
+                {#if data.length > 0}
+                    {#each data as writing}
+                        <div class="writing-item">
+                            <h3>/ <a href="/blog/{writing.title}">{writing.title}</a></h3>
+                            <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
+                        </div>
+                    {/each}
+                {:else}
+                    <p>it seems i have not written anything yet.</p>
+                {/if}
+            {:catch error}
+                <p>whoops</p>
+            {/await}
         </div>
     </div>
 </div>
