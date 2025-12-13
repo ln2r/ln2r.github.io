@@ -79,18 +79,22 @@
         {#await data.projects}
             <p>getting stuff i did...</p>
             {:then data}
-                {#each data as group}
-                    <div class="project-row">
-                        {#each group as project}
-                            <div class="project-item">
-                                <h3>> <a href={project.html_url}>{project.name}</a> </h3>
-                                <p>{project.description ?? "no description added"}</p>
-                                <br />
-                                <small>{[project.language, ...project.topics].join (", ")}</small>
-                            </div>
-                        {/each}
-                    </div>
-                {/each}
+                {#if data.length > 0}
+                    {#each data as group}
+                        <div class="project-row">
+                            {#each group as project}
+                                <div class="project-item">
+                                    <h3>> <a href={project.html_url}>{project.name}</a> </h3>
+                                    <p>{project.description ?? "no description added"}</p>
+                                    <br />
+                                    <small>{[project.language, ...project.topics].join (", ")}</small>
+                                </div>
+                            {/each}
+                        </div>
+                    {/each}
+                {:else}
+                    <p>it seems i have not did anything yet.</p>
+                {/if}
             {:catch error}
             <p>the list seems broken... will get back to you soon.</p>
         {/await}
