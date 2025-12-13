@@ -2,6 +2,7 @@
     import {Mugunghwa} from "$lib/utils/mugunghwa.ts";
     import {onMount} from "svelte";
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
+
     let mugunghwa = new Mugunghwa();
 
     let projects = [];
@@ -60,10 +61,10 @@
     .writing-item {
         h3 {
             padding-top: 1em;
-            width: 25%;
+            width: 30%;
         }
         p {
-            width: 75%;
+            width: 70%;
             margin: 0;
             padding: 0;
         }
@@ -108,12 +109,16 @@
         <h2>writings</h2>
         {#await writings}
             {:then data}
-                {#each data as writing}
-                    <div class="writing-item">
-                        <h3>/ <a href={writing.title}>{writing.title}</a></h3>
-                        <p><SvelteMarkdown source={writing.body.slice(0, 150)} /></p>
-                    </div>
-                {/each}
+                {#if data.length > 0}
+                    {#each data as writing}
+                        <div class="writing-item">
+                            <h3>/ <a href={writing.title}>{writing.title}</a></h3>
+                            <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
+                        </div>
+                    {/each}
+                {:else}
+                    <p>it seems i have not written anything yet.</p>
+                {/if}
             {:catch error}
             <p>whoops</p>
         {/await}
@@ -122,7 +127,7 @@
     <div class="contact-list">
         <h2>contacts</h2>
         <div class="contact-item">
-            <p><a href="https://discord.com/users/132712988875423745">discord</a>, <a href="https://github.com/ln2r">mugunghwa</a></p>
+            <p><a href="https://discord.com/users/132712988875423745">discord</a></p>
         </div>
     </div>
 </div>
