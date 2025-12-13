@@ -1,7 +1,8 @@
 <script>
-    import {github} from "$lib/utils/github.js";
+    import {Mugunghwa} from "$lib/utils/mugunghwa.ts";
+    let mugunghwa = new Mugunghwa();
 
-    let projects = github();
+    let projects = mugunghwa.works();
 </script>
 
 <svelte:head>
@@ -95,7 +96,7 @@
     <div class="contact-list">
         <h2>contacts</h2>
         <div class="contact-item">
-            <p><a href="https://discord.com/users/132712988875423745">discord</a>, <a href="https://github.com/ln2r">github</a></p>
+            <p><a href="https://discord.com/users/132712988875423745">discord</a>, <a href="https://github.com/ln2r">mugunghwa</a></p>
         </div>
     </div>
 </div>
