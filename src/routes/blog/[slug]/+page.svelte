@@ -1,16 +1,8 @@
 <script lang="ts">
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
+    import {formatDate} from "$lib/utils/format-date.ts";
 
     export let data;
-    function formatDate(date: Date) {
-        return new Intl.DateTimeFormat("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-        }).format(new Date(date));
-    }
 </script>
 
 <svelte:head>
@@ -65,7 +57,7 @@
             {/if}
             <div class="title">
                 <h1>{data.title}</h1>
-                <small>{formatDate(data.created)}</small>
+                <small>Posted: {formatDate(data.created)} - {data.id}</small>
             </div>
             <SvelteMarkdown source={data.body} />
         {:catch error}
