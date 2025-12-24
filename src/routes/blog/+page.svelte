@@ -1,6 +1,7 @@
 <script>
     import {Mugunghwa} from "$lib/utils/mugunghwa.js";
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
+    import {formatDate} from "$lib/utils/format-date.ts";
 
     let mugunghwa = new Mugunghwa();
     let writings = mugunghwa.writings();
@@ -27,31 +28,17 @@
         }
     }
 
-   .writing-item {
+    .writing-item {
         h3 {
-            margin: 0;
+            margin-bottom: 0;
+        }
+
+        p, small {
+            padding-left: 1.3em;
         }
 
         p {
-            margin-top: 1em;
-            text-align: left;
-        }
-    }
-
-    .writing-item {
-        width: auto;
-        display: flex;
-    }
-
-    .writing-item {
-        h3 {
-            padding-top: 1em;
-            width: 30%;
-        }
-        p {
-            width: 70%;
-            margin: 0;
-            padding: 0;
+            font-style: italic;
         }
     }
 </style>
@@ -69,7 +56,8 @@
                     {#each data as writing}
                         <div class="writing-item">
                             <h3>/ <a href="/blog/{writing.slug}">{writing.title}</a></h3>
-                            <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
+                            <small>Posted: {formatDate(writing.created)}</small>
+                            <p><SvelteMarkdown source={writing.body.slice(0, 255) + "..."} /></p>
                         </div>
                     {/each}
                 {:else}

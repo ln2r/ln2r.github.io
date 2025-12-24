@@ -1,5 +1,6 @@
 <script>
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
+    import {formatDate} from "$lib/utils/format-date.ts";
 
     export let data;
 </script>
@@ -23,7 +24,7 @@
         margin-top: 3em;
     }
 
-    .project-item, .writing-item, .contact-item {
+    .project-item, .contact-item {
         h3 {
             margin: 0;
         }
@@ -38,7 +39,7 @@
         }
     }
 
-    .project-row, .writing-item {
+    .project-row {
         width: auto;
         display: flex;
 
@@ -50,13 +51,15 @@
 
     .writing-item {
         h3 {
-            padding-top: 1em;
-            width: 30%;
+            margin-bottom: 0;
         }
+
+        p, small {
+            padding-left: 1.3em;
+        }
+
         p {
-            width: 70%;
-            margin: 0;
-            padding: 0;
+            font-style: italic;
         }
     }
 
@@ -109,7 +112,8 @@
                     {#each data as writing}
                         <div class="writing-item">
                             <h3>/ <a href="/blog/{writing.slug}">{writing.title}</a></h3>
-                            <p><SvelteMarkdown source={writing.body.slice(0, 200) + "..."} /></p>
+                            <small>Posted: {formatDate(writing.created)}</small>
+                            <p><SvelteMarkdown source={writing.body.slice(0, 50) + "..."} /></p>
                         </div>
                     {/each}
                 {:else}
