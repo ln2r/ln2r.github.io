@@ -1,10 +1,8 @@
 <script>
-    import {Mugunghwa} from "$lib/utils/mugunghwa.js";
     import SvelteMarkdown from "@humanspeak/svelte-markdown";
     import {formatDate} from "$lib/utils/format-date.ts";
 
-    let mugunghwa = new Mugunghwa();
-    let writings = mugunghwa.writings();
+    export let data;
 </script>
 
 <style>
@@ -49,7 +47,7 @@
     </div>
     <div class="body">
         <div class="writing-list">
-            {#await writings}
+            {#await data.writings}
                 <p>getting writings...</p>
             {:then data}
                 {#if data.length > 0}
