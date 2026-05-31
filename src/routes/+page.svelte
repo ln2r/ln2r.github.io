@@ -12,8 +12,8 @@
 <div class="content">
     <p>
         heavily and mainly doing backend, from professional use (work) to random
-        silly apps. outside codes i play games, watch movies/anime, and read
-        books.
+        silly apps. outside of codes stuff, i usually doing nerd stuff (gunpla,
+        games, anime).
     </p>
 
     <div class="project-list">
