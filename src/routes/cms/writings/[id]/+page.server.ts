@@ -1,4 +1,5 @@
 import { Auth } from "$lib/utils/apis/auth";
+import { File } from "$lib/utils/apis/files";
 import { Writing, type WritingUpdate } from "$lib/utils/apis/writings";
 import { Session } from "$lib/utils/session";
 
@@ -6,18 +7,12 @@ export async function load({ fetch, params, cookies }) {
     const session = new Session(fetch, cookies);
     const auth = new Auth(fetch, undefined, session);
     const writing = new Writing(fetch);
-
-    // const files = await fetch(`${PUBLIC_API_BASE}/utils/files`, {
-    //     headers: {
-    //         "content-type": "application/json",
-    //         "x-mugunghwa-key": PRIVATE_API_KEY,
-    //     },
-    // });
+    const file = new File(session);
 
     return {
         writing: await writing.getOneById(params.id),
         session: await auth.me(),
-        // files: await files.json(),
+        files: await file.list(),
     };
 }
 
