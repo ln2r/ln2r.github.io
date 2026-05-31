@@ -9,7 +9,7 @@
 <div class="content">
     <div class="list">
         <h2>projects</h2>
-        <small>add</small>
+        <small><a href="/cms/works">add</a></small>
         {#await data.projects}
             <p>getting stuff i did...</p>
         {:then data}
@@ -17,7 +17,7 @@
                 {#each data as project}
                     <div class="item">
                         <h3>
-                            > <a href="/cms/projects/{project.id}"
+                            > <a href="/cms/works/{project.id}"
                                 >{project.title}</a
                             >
                         </h3>
