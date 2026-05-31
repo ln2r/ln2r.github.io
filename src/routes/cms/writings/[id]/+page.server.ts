@@ -43,6 +43,6 @@ export const actions = {
 
         const res = await writing.update(params.id, payload);
 
-        return await res.json();
+        return res;
     },
 };
