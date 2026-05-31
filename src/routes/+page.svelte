@@ -11,9 +11,9 @@
 
 <div class="content">
     <p>
-        heavily and mainly doing backend nodejs stuff, from professional use
-        (work) to silly random app i make to make things easier. outside codes i
-        love to play games, watch movies/anime, and read books.
+        heavily and mainly doing backend, from professional use (work) to random
+        silly apps. outside codes i play games, watch movies/anime, and read
+        books.
     </p>
 
     <div class="project-list">
@@ -21,22 +21,17 @@
         {#await data.projects}
             <p>getting stuff i did...</p>
         {:then data}
-            {#if data.length > 0 && data[0].length > 0}
-                {#each data as group}
-                    <div class="project-row">
-                        {#each group as project}
-                            <div class="project-item">
-                                <h3>
-                                    > <a href={project.url}>{project.title}</a>
-                                </h3>
-                                <p>
-                                    {project.description ??
-                                        "no description added"}
-                                </p>
-                                <br />
-                                <small>{project.stacks}</small>
-                            </div>
-                        {/each}
+            {#if data.length > 0}
+                {#each data as project}
+                    <div class="project-item">
+                        <h3>
+                            > <a href={project.url}>{project.title}</a>
+                        </h3>
+                        <p>
+                            {project.description ?? "no description added"}
+                        </p>
+                        <br />
+                        <small>{project.stacks}</small>
                     </div>
                 {/each}
             {:else}
