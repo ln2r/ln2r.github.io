@@ -10,7 +10,7 @@ export async function load({ fetch, cookies }) {
 
     return {
         session: await auth.me(),
-        files: file,
+        files: await file.list(),
     };
 }
 
