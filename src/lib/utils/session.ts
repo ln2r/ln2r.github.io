@@ -1,5 +1,6 @@
-import { PUBLIC_API_BASE } from "$env/static/public";
+import { env } from "$env/dynamic/public";
 import { redirect, type Cookies } from "@sveltejs/kit";
+const { PUBLIC_API_BASE } = env;
 
 export class Session {
     // this is for locking refresh access token,
